@@ -1,0 +1,92 @@
+:root {
+  --primary-color: rgb(255, 107, 66);
+  --secondary-color: rgb(255, 225, 94);
+  --background: white;
+  --card-bg: white;
+  --text-color: black;
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+#app {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.summary {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  min-height: 150px;
+  margin-bottom: 30px;
+  padding: 30px 20px;
+}
+.title {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+}
+.result {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-top: 10px;
+  min-height: 30px;
+}
+.game {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--card-bg);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  font-size: 2.5rem;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.option:hover {
+  cursor: pointer;
+  background: var(--primary-color);
+  color: #fff;
+  transform: scale(1.15) rotate(-10deg);
+  box-shadow: 0 12px 24px 0 rgba(252, 74, 26, 0.15);
+}
+
+@media (max-width: 500px) {
+  .summary, .game {
+    width: 95vw;
+    min-width: unset;
+  }
+  .option {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}
