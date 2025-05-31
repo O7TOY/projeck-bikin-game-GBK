@@ -45,7 +45,7 @@
                 message = "MENANG👍";
             }
             else if (this.winner === this.botName) {
-                message = "KALAH😢";
+                message = "KALAH 😢";
             } else {
                 message = "SERII😜";
             }
